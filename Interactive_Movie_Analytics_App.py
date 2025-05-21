@@ -28,7 +28,7 @@ user_clusters = pd.DataFrame({'userId': user_item_matrix.index, 'cluster': clust
 # Streamlit Layout
 st.set_page_config(page_title="🎬 Movie Insights Dashboard", layout="wide")
 
-st.title("🎬 Interactive Movie Insights Dashboard")
+st.title("🎬 Interactive Movie Insights Dashboard App")
 
 tabs = st.tabs(["📊 Ratings per User", "🏷️ Top Tags", "🎞️ Top Genres", "🧠 User Cluster Distribution", "🎯 Top Genres by Cluster", "👤 User Ratings by Cluster"])
 
