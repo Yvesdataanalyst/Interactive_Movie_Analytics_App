@@ -26,7 +26,7 @@ clusters = kmeans.fit_predict(user_features)
 user_clusters = pd.DataFrame({'userId': user_item_matrix.index, 'cluster': clusters})
 
 # Streamlit Layout
-st.set_page_config(page_title="🎬 Movie Insights Dashboard", layout="wide")
+st.set_page_config(page_title="🎬 Movie_Insights_Dashboard", layout="wide")
 
 st.title("🎬 Interactive_Movie_Insights_Dashboard_App")
 
