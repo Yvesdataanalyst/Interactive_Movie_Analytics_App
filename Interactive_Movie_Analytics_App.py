@@ -15,7 +15,7 @@ genre_exploded = full_df.explode('genre_list')
 top_genres = genre_exploded['genre_list'].value_counts().head(15)
 
 # User-item matrix
-sample_df = full_df[['userId', 'movieId', 'rating']].sample(n=10000, random_state=42)
+sample_df = full_df[['userId', 'movieId', 'rating']]
 user_item_matrix = sample_df.pivot_table(index='userId', columns='movieId', values='rating').fillna(0)
 
 # Clustering
@@ -28,7 +28,7 @@ user_clusters = pd.DataFrame({'userId': user_item_matrix.index, 'cluster': clust
 # Streamlit Layout
 st.set_page_config(page_title="🎬 Movie Insights Dashboard", layout="wide")
 
-st.title("🎬 Interactive Movie Insights Dashboard App")
+st.title("🎬 Interactive_Movie_Insights_Dashboard_App")
 
 tabs = st.tabs(["📊 Ratings per User", "🏷️ Top Tags", "🎞️ Top Genres", "🧠 User Cluster Distribution", "🎯 Top Genres by Cluster", "👤 User Ratings by Cluster"])
 
